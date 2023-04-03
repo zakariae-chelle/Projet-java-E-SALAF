@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.HelloController">
+   <children>
+      <SplitPane layoutX="1.0" layoutY="67.0" prefHeight="496.0" prefWidth="483.0">
+         <items>
+            <AnchorPane prefHeight="512.0" prefWidth="481.0" style="-fx-background-color: #31F1A2;">
+               <children>
+                  <Label layoutX="14.0" layoutY="30.0" prefHeight="49.0" prefWidth="78.0" text="Nom : ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="87.0" prefHeight="49.0" prefWidth="109.0" text="Telephone :">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="161.0" prefHeight="49.0" prefWidth="78.0" text="ID : ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nom" layoutX="128.0" layoutY="38.0" prefHeight="33.0" prefWidth="225.0" />
+                  <TextField fx:id="tele" layoutX="128.0" layoutY="95.0" prefHeight="33.0" prefWidth="225.0" />
+                  <TextField fx:id="tfid" layoutX="128.0" layoutY="169.0" prefHeight="33.0" prefWidth="225.0" />
+                  <ImageView fitHeight="71.0" fitWidth="88.0" layoutX="57.0" layoutY="264.0" onMouseClicked="#onSaveButtonClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/rsave.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="89.0" layoutX="205.0" layoutY="264.0" onMouseClicked="#onUpdatebtnclick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/backup.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="78.0" layoutX="343.0" layoutY="264.0" onMouseClicked="#supprimerClient" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/trash.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <TableView fx:id="mytab" layoutX="485.0" layoutY="64.0" onMouseClicked="#getData" prefHeight="503.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="123.0" text="ID" />
+          <TableColumn fx:id="col_nom" prefWidth="122.0" text="Nom" />
+            <TableColumn fx:id="col_tele" prefWidth="169.0" text="Telephone" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutY="59.0" prefHeight="6.0" prefWidth="911.0" style="-fx-background-color: black;" />
+      <Label layoutX="420.0" layoutY="14.0" prefHeight="39.0" prefWidth="274.0" text=" CLIENTS ">
+         <font>
+            <Font name="Bodoni MT Italic" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="45.0" layoutX="14.0" layoutY="9.0" onMouseClicked="#todash" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

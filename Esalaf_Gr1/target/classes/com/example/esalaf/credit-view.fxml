@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="1061.0" style="-fx-background-color: #31F1A2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.CommandPageController">
+   <children>
+      <Pane layoutX="-5.0" layoutY="46.0" prefHeight="8.0" prefWidth="1064.0" style="-fx-background-color: black;" />
+      <Label layoutX="29.0" layoutY="82.0" prefHeight="49.0" prefWidth="116.0" text="Client : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="139.0" prefHeight="49.0" prefWidth="116.0" text="Produit : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="204.0" prefHeight="49.0" prefWidth="116.0" text="Quantite :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfqte" layoutX="153.0" layoutY="212.0" prefHeight="33.0" prefWidth="185.0" />
+      <TableView fx:id="mytab" layoutX="406.0" layoutY="54.0" onMouseClicked="#getData" prefHeight="520.0" prefWidth="652.0">
+        <columns>
+            <TableColumn fx:id="col_idcom" prefWidth="102.0" text="ID Command" />
+          <TableColumn fx:id="col_cli" prefWidth="112.0" text="Client" />
+          <TableColumn fx:id="Col_prod" prefWidth="126.0" text="Produit" />
+            <TableColumn fx:id="Col_prix" prefWidth="92.0" text="Prix" />
+            <TableColumn fx:id="Col_qte" prefWidth="105.0" text="Quantite" />
+            <TableColumn fx:id="Col_date" prefWidth="118.0" text="Date Command" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfcli" layoutX="153.0" layoutY="90.0" prefHeight="33.0" prefWidth="185.0" />
+      <TextField fx:id="tfprod" layoutX="153.0" layoutY="147.0" prefHeight="33.0" prefWidth="185.0" />
+      <TextField fx:id="tfprix" layoutX="153.0" layoutY="278.0" prefHeight="33.0" prefWidth="185.0" />
+      <Label layoutX="29.0" layoutY="270.0" prefHeight="49.0" prefWidth="116.0" text="Prix : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="396.0" prefHeight="49.0" prefWidth="125.0" text="ID Command :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfidcom" layoutX="160.0" layoutY="404.0" prefHeight="33.0" prefWidth="185.0" />
+      <AnchorPane prefHeight="49.0" prefWidth="1061.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="351.0" layoutY="2.0" prefHeight="49.0" prefWidth="360.0" text="COMMANDES" textFill="#3b613e" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Bodoni MT Italic" size="30.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="40.0" layoutX="21.0" layoutY="10.0" onMouseClicked="#toS1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="23.0" layoutY="330.0" prefHeight="49.0" prefWidth="144.0" text="Date Command :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="56.0" fitWidth="64.0" layoutX="39.0" layoutY="468.0" onMouseClicked="#onSaveButtonClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/rsave.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="167.0" layoutY="468.0" onMouseClicked="#onUpdatebtnclick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/backup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="289.0" layoutY="468.0" onMouseClicked="#onbtndeleteclick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/trash.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="tfdate" layoutX="159.0" layoutY="342.0" prefHeight="33.0" prefWidth="185.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.ProductView">
+   <children>
+      <TableView fx:id="mytab" layoutX="335.0" layoutY="66.0" onMouseClicked="#getData" prefHeight="525.0" prefWidth="584.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="66.0">
+        <columns>
+            <TableColumn fx:id="col_id" prefWidth="150.0" text="ID" />
+          <TableColumn fx:id="col_nom" prefWidth="150.0" text="Nom" />
+          <TableColumn fx:id="Col_prix" prefWidth="115.0" text="Prix" />
+            <TableColumn fx:id="Col_qte" prefWidth="167.0" text="Quantité" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="-3.0" layoutY="57.0" prefHeight="9.0" prefWidth="919.0" style="-fx-background-color: black;" />
+      <AnchorPane layoutY="66.0" prefHeight="525.0" prefWidth="336.0" style="-fx-background-color: #31F1A2;">
+         <children>
+            <Label layoutX="19.0" layoutY="110.0" text="Prix : ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="181.0" prefHeight="40.0" prefWidth="102.0" text="Quantite : ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="251.0" text="ID : ">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="33.0" text="Nom :">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom_prod" layoutX="137.0" layoutY="40.0" prefHeight="31.0" prefWidth="181.0" />
+            <TextField fx:id="price_pod" layoutX="137.0" layoutY="110.0" prefHeight="31.0" prefWidth="181.0" />
+            <TextField fx:id="qte_prd" layoutX="137.0" layoutY="186.0" prefHeight="31.0" prefWidth="181.0" />
+            <TextField fx:id="tfid" layoutX="137.0" layoutY="251.0" prefHeight="31.0" prefWidth="181.0" />
+            <ImageView fitHeight="72.0" fitWidth="79.0" layoutX="11.0" layoutY="355.0" onMouseClicked="#onSaveButtonClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/rsave.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="132.0" layoutY="355.0" onMouseClicked="#onUpdatebtnclick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/backup.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="246.0" layoutY="355.0" onMouseClicked="#deletprod" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/trash.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="390.0" layoutY="10.0" prefHeight="39.0" prefWidth="237.0" text="PRODUITS">
+         <font>
+            <Font name="Bodoni MT Italic" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="43.0" layoutX="14.0" layoutY="10.0" onMouseClicked="#todash" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

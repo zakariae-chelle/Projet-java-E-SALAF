@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.esalaf.DashboardView">
+   <children>
+      <Pane prefHeight="570.0" prefWidth="312.0" style="-fx-background-color: #31F1A2;">
+         <children>
+            <ImageView fitHeight="283.0" fitWidth="312.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/basket.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="361.0" prefHeight="170.0" prefWidth="312.0" text="𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓔~𝓢𝓐𝓛𝓐𝓕" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children></Pane>
+      <ImageView fitHeight="190.0" fitWidth="269.0" layoutX="434.0" layoutY="172.0" onMouseClicked="#topro" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/panel.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="185.0" fitWidth="269.0" layoutX="434.0" layoutY="322.0" onMouseClicked="#tocredit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/panel.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="478.0" layoutY="397.0" onMouseClicked="#tocredit" prefHeight="64.0" prefWidth="188.0" text="COMMAND" textFill="#31f1a2">
+         <font>
+            <Font name="Impact" size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="490.0" layoutY="243.0" onMouseClicked="#topro" prefHeight="64.0" prefWidth="165.0" text="PRODUIT" textFill="#31f1a2">
+         <font>
+            <Font name="Impact" size="45.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="179.0" fitWidth="269.0" layoutX="438.0" layoutY="33.0" onMouseClicked="#tocli" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/panel.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="502.0" layoutY="108.0" onMouseClicked="#tocli" prefHeight="36.0" prefWidth="175.0" text="CLIENTS" textFill="#31f1a2">
+         <font>
+            <Font name="Impact" size="45.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
